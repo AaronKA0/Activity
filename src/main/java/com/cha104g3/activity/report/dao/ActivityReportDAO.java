@@ -13,6 +13,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import com.cha104g3.activity.report.model.ActivityReportVO;
+
 public class ActivityReportDAO implements ActivityReportDAO_interface {
 
 	// String driver = "com.mysql.cj.jdbc.Driver";
@@ -20,7 +22,7 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 //	String userid = "root";
 //	String passwd = "s840104";
 
-	// ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½,ï¿½wï¿½ï¿½@ï¿½Ó¸ï¿½Æ®w ,ï¿½@ï¿½Î¤@ï¿½ï¿½DataSourceï¿½Yï¿½i
+	// ¤@­ÓÀ³¥Îµ{¦¡¤¤,°w¹ï¤@­Ó¸ê®Æ®w ,¦@¥Î¤@­ÓDataSource§Y¥i
 	private static DataSource ds = null;
 	static {
 		try {
@@ -59,10 +61,7 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 			pstmt.setString(5, activityReportVO.getRepContent());
 			pstmt.setTimestamp(6, activityReportVO.getRepTime());
 
-			con.setAutoCommit(false);
 			pstmt.executeUpdate();
-			System.out.println("ï¿½sï¿½Wï¿½ï¿½ï¿½\");
-			con.rollback();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -92,10 +91,7 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 			pstmt.setInt(1, activityReportVO.getRepStatus());
 			pstmt.setInt(2, activityReportVO.getRepId());
 
-			con.setAutoCommit(false);
 			pstmt.executeUpdate();
-			System.out.println("updateï¿½ï¿½ï¿½\");
-			con.rollback();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -233,22 +229,22 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 	}
 
 //	public static void main(String[] args) {
-//
+
 //		ActivityReportDAO_interface activityReportDAO = new ActivityReportDAO();
 
-	// ï¿½sï¿½W
+	// ·s¼W
 //		ActivityReportVO activityReportVO = new ActivityReportVO();
 //		activityReportVO.setActId(1);
 //		activityReportVO.setMemId(2);
 //		activityReportVO.setEmpId(3);
-//		activityReportVO.setRepTitle("ï¿½wï¿½w");
-//		activityReportVO.setRepContent("ï¿½wï¿½wï¿½Aï¿½n");
+//		activityReportVO.setRepTitle("¦w¦w");
+//		activityReportVO.setRepContent("¦w¦w§A¦n");
 //		activityReportVO.setRepTime(Timestamp.valueOf(LocalDateTime.now()));
 //		activityReportDAO.insert(activityReportVO);
 
-	// ï¿½dï¿½ï¿½ï¿½ï¿½
+	// ¬d¥þ³¡
 //		 List<ActivityReportVO> list = activityReportDAO.getAll();
-//
+
 //		for (ActivityReportVO activityReport : list) {
 //			System.out.println(activityReport.getActId());
 //			System.out.println(activityReport.getMemId());
@@ -260,7 +256,7 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 //					.format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")));
 //		}
 
-	// ï¿½dï¿½ï¿½@
+	// ¬d³æ¤@
 //		ActivityReportVO activityReportVO = activityReportDAO.findByPrimaryKey(1);
 
 //		System.out.println(activityReportVO.getRepId());
@@ -273,14 +269,14 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 //		System.out.println(activityReportVO.getRepStatus());
 //		System.out.println(activityReportVO.getRepTime());
 
-	// ï¿½Rï¿½ï¿½
+	// §R°£
 //		activityReportDAO.delete(1);
 
-	// ï¿½×§ï¿½
+	// ­×§ï
 //		ActivityReportVO activityReportVO = new ActivityReportVO();
 //		activityReportVO.setRepStatus(2);
 //		activityReportVO.setRepID(2);
-//		
+
 //		activityReportDAO.update(activityReportVO);
 //	}
 
