@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.time.LocalDateTime;
 
 public class ActVO implements java.io.Serializable{
+
 	private Integer actId;
 	private Integer memId;
 	private String actName;
