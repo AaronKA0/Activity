@@ -4,127 +4,127 @@ import java.sql.Date;
 import java.time.LocalDateTime;
 
 public class ActVO implements java.io.Serializable{
-	private Integer act_id;
-	private Integer mem_id;
-	private String act_name;
-	private LocalDateTime act_start_time;
-	private LocalDateTime act_end_time;
-	private String act_loc;
-	private String act_descr;
-	private Integer act_upper;
-	private Integer act_count;
-	private Byte act_status;
-	private LocalDateTime act_cr_time;
-	private LocalDateTime reg_start_time;
-	private LocalDateTime reg_end_time;
-	private byte[] act_pic;
-	private Double act_tot_rating;
-	private Integer act_rate_count;
-	private Integer act_follow_count;
+
+	private Integer actId;
+	private Integer memId;
+	private String actName;
+	private LocalDateTime actStartTime;
+	private LocalDateTime actEndTime;
+	private String actLoc;
+	private String actDescr;
+	private Integer actUpper;
+	private Integer actCount;
+	private Byte actStatus;
+	private LocalDateTime actCrTime;
+	private LocalDateTime regStartTime;
+	private LocalDateTime regEndTime;
+	private byte[] actPic;
+	private Double actTotRating;
+	private Integer actRateCount;
+	private Integer actFollowCount;
 	private BigDecimal lat;
 	private BigDecimal lon;
-	
-	public Integer getAct_id() {
-		return act_id;
+	public Integer getActId() {
+		return actId;
 	}
-	public void setAct_id(Integer act_id) {
-		this.act_id = act_id;
+	public void setActId(Integer actId) {
+		this.actId = actId;
 	}
-	public Integer getMem_id() {
-		return mem_id;
+	public Integer getMemId() {
+		return memId;
 	}
-	public void setMem_id(Integer mem_id) {
-		this.mem_id = mem_id;
+	public void setMemId(Integer memId) {
+		this.memId = memId;
 	}
-	public String getAct_name() {
-		return act_name;
+	public String getActName() {
+		return actName;
 	}
-	public void setAct_name(String act_name) {
-		this.act_name = act_name;
+	public void setActName(String actName) {
+		this.actName = actName;
 	}
-	public LocalDateTime getAct_start_time() {
-		return act_start_time;
+	public LocalDateTime getActStartTime() {
+		return actStartTime;
 	}
-	public void setAct_start_time(LocalDateTime act_start_time) {
-		this.act_start_time = act_start_time;
+	public void setActStartTime(LocalDateTime actStartTime) {
+		this.actStartTime = actStartTime;
 	}
-	public LocalDateTime getAct_end_time() {
-		return act_end_time;
+	public LocalDateTime getActEndTime() {
+		return actEndTime;
 	}
-	public void setAct_end_time(LocalDateTime act_end_time) {
-		this.act_end_time = act_end_time;
+	public void setActEndTime(LocalDateTime actEndTime) {
+		this.actEndTime = actEndTime;
 	}
-	public String getAct_loc() {
-		return act_loc;
+	public String getActLoc() {
+		return actLoc;
 	}
-	public void setAct_loc(String act_loc) {
-		this.act_loc = act_loc;
+	public void setActLoc(String actLoc) {
+		this.actLoc = actLoc;
 	}
-	public String getAct_descr() {
-		return act_descr;
+	public String getActDescr() {
+		return actDescr;
 	}
-	public void setAct_descr(String act_descr) {
-		this.act_descr = act_descr;
+	public void setActDescr(String actDescr) {
+		this.actDescr = actDescr;
 	}
-	public Integer getAct_upper() {
-		return act_upper;
+	public Integer getActUpper() {
+		return actUpper;
 	}
-	public void setAct_upper(Integer act_upper) {
-		this.act_upper = act_upper;
+	public void setActUpper(Integer actUpper) {
+		this.actUpper = actUpper;
 	}
-	public Integer getAct_count() {
-		return act_count;
+	public Integer getActCount() {
+		return actCount;
 	}
-	public void setAct_count(Integer act_count) {
-		this.act_count = act_count;
+	public void setActCount(Integer actCount) {
+		this.actCount = actCount;
 	}
-	public Byte getAct_status() {
-		return act_status;
+	public Byte getActStatus() {
+		return actStatus;
 	}
-	public void setAct_status(Byte act_status) {
-		this.act_status = act_status;
+	public void setActStatus(Byte actStatus) {
+		this.actStatus = actStatus;
 	}
-	public LocalDateTime getAct_cr_time() {
-		return act_cr_time;
+	public LocalDateTime getActCrTime() {
+		return actCrTime;
 	}
-	public void setAct_cr_time(LocalDateTime act_cr_time) {
-		this.act_cr_time = act_cr_time;
+	public void setActCrTime(LocalDateTime actCrTime) {
+		this.actCrTime = actCrTime;
 	}
-	public LocalDateTime getReg_start_time() {
-		return reg_start_time;
+	public LocalDateTime getRegStartTime() {
+		return regStartTime;
 	}
-	public void setReg_start_time(LocalDateTime reg_start_time) {
-		this.reg_start_time = reg_start_time;
+	public void setRegStartTime(LocalDateTime regStartTime) {
+		this.regStartTime = regStartTime;
 	}
-	public LocalDateTime getReg_end_time() {
-		return reg_end_time;
+	public LocalDateTime getRegEndTime() {
+		return regEndTime;
 	}
-	public void setReg_end_time(LocalDateTime reg_end_time) {
-		this.reg_end_time = reg_end_time;
+	public void setRegEndTime(LocalDateTime regEndTime) {
+		this.regEndTime = regEndTime;
 	}
-	public byte[] getAct_pic() {
-		return act_pic;
+	public byte[] getActPic() {
+		return actPic;
 	}
-	public void setAct_pic(byte[] act_pic) {
-		this.act_pic = act_pic;
+	public void setActPic(byte[] actPic) {
+		this.actPic = actPic;
 	}
-	public double getAct_tot_rating() {
-		return act_tot_rating;
+	public Double getActTotRating() {
+		return actTotRating;
 	}
-	public void setAct_tot_rating(double act_tot_rating) {
-		this.act_tot_rating = act_tot_rating;
+	public void setActTotRating(Double actTotRating) {
+		this.actTotRating = actTotRating;
 	}
-	public Integer getAct_rate_count() {
-		return act_rate_count;
+	public Integer getActRateCount() {
+		return actRateCount;
 	}
-	public void setAct_rate_count(Integer act_rate_count) {
-		this.act_rate_count = act_rate_count;
+	public void setActRateCount(Integer actRateCount) {
+		this.actRateCount = actRateCount;
 	}
-	public Integer getAct_follow_count() {
-		return act_follow_count;
+	public Integer getActFollowCount() {
+		return actFollowCount;
 	}
-	public void setAct_follow_count(Integer act_follow_count) {
-		this.act_follow_count = act_follow_count;
+	public void setActFollowCount(Integer actFollowCount) {
+		this.actFollowCount = actFollowCount;
 	}
 	public BigDecimal getLat() {
 		return lat;
