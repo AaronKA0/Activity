@@ -3,6 +3,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class ActVO implements java.io.Serializable{
+
+	
 	private Integer actId;
 	private Integer memId;
 	private String actName;
@@ -22,6 +24,7 @@ public class ActVO implements java.io.Serializable{
 	private Integer actFollowCount;
 	private BigDecimal lat;
 	private BigDecimal lon;
+	
 	public Integer getActId() {
 		return actId;
 	}
