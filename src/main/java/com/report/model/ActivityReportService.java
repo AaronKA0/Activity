@@ -1,10 +1,6 @@
-package com.cha104g3.activity.report.service;
+package com.report.model;
 
 import java.util.List;
-
-import com.cha104g3.activity.report.dao.ActivityReportDAO;
-import com.cha104g3.activity.report.dao.ActivityReportDAO_interface;
-import com.cha104g3.activity.report.model.ActivityReportVO;
 
 public class ActivityReportService {
 

@@ -1,4 +1,4 @@
-package com.cha104g3.activity.venuetype.model;
+package com.venuetype.model;
 
 import java.io.Serializable;
 import java.util.Objects;

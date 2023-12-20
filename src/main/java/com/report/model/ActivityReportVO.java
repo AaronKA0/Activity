@@ -1,4 +1,4 @@
-package com.cha104g3.activity.report.model;
+package com.report.model;
 
 import java.sql.Timestamp;
 

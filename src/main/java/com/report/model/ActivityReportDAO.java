@@ -1,4 +1,4 @@
-package com.cha104g3.activity.report.dao;
+package com.report.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,8 +13,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import com.cha104g3.activity.report.model.ActivityReportVO;
-
 public class ActivityReportDAO implements ActivityReportDAO_interface {
 
 	// String driver = "com.mysql.cj.jdbc.Driver";
@@ -22,7 +20,7 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 //	String userid = "root";
 //	String passwd = "s840104";
 
-	// ¤@­ÓÀ³¥Îµ{¦¡¤¤,°w¹ï¤@­Ó¸ê®Æ®w ,¦@¥Î¤@­ÓDataSource§Y¥i
+	// ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½,ï¿½wï¿½ï¿½@ï¿½Ó¸ï¿½Æ®w ,ï¿½@ï¿½Î¤@ï¿½ï¿½DataSourceï¿½Yï¿½i
 	private static DataSource ds = null;
 	static {
 		try {
@@ -232,17 +230,17 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 
 //		ActivityReportDAO_interface activityReportDAO = new ActivityReportDAO();
 
-	// ·s¼W
+	// ï¿½sï¿½W
 //		ActivityReportVO activityReportVO = new ActivityReportVO();
 //		activityReportVO.setActId(1);
 //		activityReportVO.setMemId(2);
 //		activityReportVO.setEmpId(3);
-//		activityReportVO.setRepTitle("¦w¦w");
-//		activityReportVO.setRepContent("¦w¦w§A¦n");
+//		activityReportVO.setRepTitle("ï¿½wï¿½w");
+//		activityReportVO.setRepContent("ï¿½wï¿½wï¿½Aï¿½n");
 //		activityReportVO.setRepTime(Timestamp.valueOf(LocalDateTime.now()));
 //		activityReportDAO.insert(activityReportVO);
 
-	// ¬d¥þ³¡
+	// ï¿½dï¿½ï¿½ï¿½ï¿½
 //		 List<ActivityReportVO> list = activityReportDAO.getAll();
 
 //		for (ActivityReportVO activityReport : list) {
@@ -256,7 +254,7 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 //					.format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")));
 //		}
 
-	// ¬d³æ¤@
+	// ï¿½dï¿½ï¿½@
 //		ActivityReportVO activityReportVO = activityReportDAO.findByPrimaryKey(1);
 
 //		System.out.println(activityReportVO.getRepId());
@@ -269,10 +267,10 @@ public class ActivityReportDAO implements ActivityReportDAO_interface {
 //		System.out.println(activityReportVO.getRepStatus());
 //		System.out.println(activityReportVO.getRepTime());
 
-	// §R°£
+	// ï¿½Rï¿½ï¿½
 //		activityReportDAO.delete(1);
 
-	// ­×§ï
+	// ï¿½×§ï¿½
 //		ActivityReportVO activityReportVO = new ActivityReportVO();
 //		activityReportVO.setRepStatus(2);
 //		activityReportVO.setRepID(2);

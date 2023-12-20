@@ -1,4 +1,4 @@
-package com.cha104g3.activity.activity.model;
+package com.act.model;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.time.LocalDateTime;

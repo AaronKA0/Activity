@@ -1,4 +1,4 @@
-package com.cha104g3.activity.faq.model;
+package com.faq.model;
 import java.sql.Date;
 
 public class FaqVO implements java.io.Serializable{
