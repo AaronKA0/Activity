@@ -12,10 +12,10 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import com.report.dao.ActivityReportDAO;
+import com.report.dao.ActivityReportDao;
 import com.report.model.ActivityReport;
 
-public class ActivityReportDAOimpl implements ActivityReportDAO {
+public class ActivityReportDaoImpl implements ActivityReportDao {
 
 	private static DataSource ds = null;
 	static {

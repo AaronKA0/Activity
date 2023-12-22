@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.commentreport.model.ActivityCommentReport;
 
-public interface CommentReportDAO {
+public interface CommentReportDao {
 
 	List<ActivityCommentReport> getAll();
 

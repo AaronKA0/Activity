@@ -2,10 +2,10 @@ package com.commentreport.dao.impl;
 
 import java.util.List;
 
-import com.commentreport.dao.CommentReportDAO;
+import com.commentreport.dao.CommentReportDao;
 import com.commentreport.model.ActivityCommentReport;
 
-public class CommentReportDAOimpl implements CommentReportDAO {
+public class CommentReportDaoImpl implements CommentReportDao {
 
 	@Override
 	public List<ActivityCommentReport> getAll() {

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 import com.report.model.ActivityReport;
-import com.report.service.impl.ActivityReportServiceimpl;
+import com.report.service.impl.ActivityReportServiceImpl;
 
 @MultipartConfig
 public class ActivityReportController extends HttpServlet {
@@ -65,7 +65,7 @@ public class ActivityReportController extends HttpServlet {
 			}
 
 			/*************************** 2.開始查詢資料 *****************************************/
-			ActivityReportServiceimpl arSvc = new ActivityReportServiceimpl();
+			ActivityReportServiceImpl arSvc = new ActivityReportServiceImpl();
 			ActivityReport activityReportVO = arSvc.findByPrimaryKey(repId);
 			if (activityReportVO == null) {
 				errorMsgs.add("查無資料");
@@ -96,7 +96,7 @@ public class ActivityReportController extends HttpServlet {
 			Integer repId = Integer.valueOf(req.getParameter("repId"));
 
 			/*************************** 2.開始查詢資料 *****************************************/
-			ActivityReportServiceimpl arSvc = new ActivityReportServiceimpl();
+			ActivityReportServiceImpl arSvc = new ActivityReportServiceImpl();
 			ActivityReport activityReportVO = arSvc.findByPrimaryKey(repId);
 
 			/*************************** 3.查詢完成,準備轉交(Send the Success view) *************/
@@ -145,7 +145,7 @@ public class ActivityReportController extends HttpServlet {
 //			}
 
 			/*************************** 2.開始查詢資料 *****************************************/
-			ActivityReportServiceimpl arSvc = new ActivityReportServiceimpl();
+			ActivityReportServiceImpl arSvc = new ActivityReportServiceImpl();
 			arSvc.update(activityReportVO);
 
 			/*************************** 3.修改完成,準備轉交(Send the Success view) *************/
@@ -222,7 +222,7 @@ public class ActivityReportController extends HttpServlet {
 			}
 
 			/*************************** 2.開始新增資料 *****************************************/
-			ActivityReportServiceimpl arSvc = new ActivityReportServiceimpl();
+			ActivityReportServiceImpl arSvc = new ActivityReportServiceImpl();
 			arSvc.insert(activityReportVO);
 
 			/*************************** 3.新增完成,準備轉交(Send the Success view) *************/
@@ -242,7 +242,7 @@ public class ActivityReportController extends HttpServlet {
 			Integer repId = Integer.valueOf(req.getParameter("repId"));
 
 			/*************************** 2.開始刪除資料 ***************************************/
-			ActivityReportServiceimpl arSvc = new ActivityReportServiceimpl();
+			ActivityReportServiceImpl arSvc = new ActivityReportServiceImpl();
 			arSvc.delete(repId);
 
 			/*************************** 3.刪除完成,準備轉交(Send the Success view) ***********/

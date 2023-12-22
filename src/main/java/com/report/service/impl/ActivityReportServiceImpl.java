@@ -2,17 +2,17 @@ package com.report.service.impl;
 
 import java.util.List;
 
-import com.report.dao.ActivityReportDAO;
-import com.report.dao.impl.ActivityReportDAOimpl;
+import com.report.dao.ActivityReportDao;
+import com.report.dao.impl.ActivityReportDaoImpl;
 import com.report.model.ActivityReport;
 import com.report.service.ActivityReportService;
 
-public class ActivityReportServiceimpl implements ActivityReportService {
+public class ActivityReportServiceImpl implements ActivityReportService {
 
-	private ActivityReportDAO activityReportDAO;
+	private ActivityReportDao activityReportDAO;
 
-	public ActivityReportServiceimpl() {
-		activityReportDAO = new ActivityReportDAOimpl();
+	public ActivityReportServiceImpl() {
+		activityReportDAO = new ActivityReportDaoImpl();
 	}
 
 	public List<ActivityReport> getAll() {

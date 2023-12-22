@@ -21,7 +21,7 @@ public class ActivityReport {
 	private String repTitle;
 	@Column(name = "rep_content")
 	private String repContent;
-	@Column(name = "rep_pic")
+	@Column(name = "rep_pic", columnDefinition = "longblob")
 	private byte[] repPic;
 	@Column(name = "rep_status")
 	private byte repStatus;
