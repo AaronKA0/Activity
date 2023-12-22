@@ -1,4 +1,6 @@
-package com.commentreport.service;
+package com.commentreport.service.impl;
 
-public class CommentReportimpl implements  CommentReport{
+import com.commentreport.service.CommentReport;
+
+public class CommentReportimpl implements CommentReport {
 }

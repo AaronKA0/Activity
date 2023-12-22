@@ -1,2 +1,4 @@
-package com.commentreport.service;public interface CommentReport {
+package com.commentreport.service;
+
+public interface CommentReport {
 }
