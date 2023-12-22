@@ -1,4 +1,4 @@
-package com.venClosed.model;
+package com.venclosed.model;
 
 import java.util.List;
 
