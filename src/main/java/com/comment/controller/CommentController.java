@@ -1,9 +1,5 @@
 package com.comment.controller;
 
-import com.comment.model.Comment;
-
-import java.util.List;
-
 public class CommentController {
 //    @Autowired
 //    private CommentService commentService;

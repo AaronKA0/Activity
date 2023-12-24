@@ -1,19 +1,26 @@
 package com.commentreport.model;
 
+import com.comment.model.Comment;
+//import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "activity_comment_report")
-public class ActivityCommentReport {
+public class CommentReport {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "rep_id")
 	private Integer repId;
-	@Column(name = "com_id")
-	private Integer comId;
-	@Column(name = "mem_id")
+//	@JsonBackReference
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "com_id", referencedColumnName = "com_id")
+	private Comment comment;
+//	private Integer com_id;
+
+	@Column(name = "mem_id") //有table後再改成ManyToOne
 	private Integer memId;
 	@Column(name = "emp_id")
 	private Integer empId;
@@ -26,7 +33,7 @@ public class ActivityCommentReport {
 	@Column(name = "rep_status")
 	private byte repStatus;
 	@Column(name = "rep_time")
-	private Timestamp repTime;
+	private Date repTime;
 
 	public Integer getRepId() {
 		return repId;
@@ -36,12 +43,12 @@ public class ActivityCommentReport {
 		this.repId = repId;
 	}
 
-	public Integer getComId() {
-		return comId;
+	public Comment getComment() {
+		return comment;
 	}
 
-	public void setComId(Integer comId) {
-		this.comId = comId;
+	public void setComment(Comment comment) {
+		this.comment = comment;
 	}
 
 	public Integer getMemId() {
@@ -92,11 +99,11 @@ public class ActivityCommentReport {
 		this.repStatus = repStatus;
 	}
 
-	public Timestamp getRepTime() {
+	public Date getRepTime() {
 		return repTime;
 	}
 
-	public void setRepTime(Timestamp repTime) {
+	public void setRepTime(Date repTime) {
 		this.repTime = repTime;
 	}
 

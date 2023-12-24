@@ -1,9 +1,6 @@
 package com.comment.service.impl;
 
-import com.comment.model.Comment;
 import com.comment.service.CommentService;
-
-import java.util.List;
 
 public class CommentServiceImpl implements CommentService {
 //    @Autowired
