@@ -1,4 +1,4 @@
-package com.faq.model;
+package com.memberreport.controller;
 
 public class Test {
 	public static void main(String[] args) {
