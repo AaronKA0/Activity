@@ -3,27 +3,78 @@ package com.membership.model;
 import java.sql.Date;
 import java.sql.Timestamp;
 
-public class MembershipVO implements java.io.Serializable {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//@Entity
+@Table(name = "membership")
+public class MembershipVO implements java.io.Serializable{
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "mem_id", insertable = false , updatable = false)
 	private Integer memId;
+	
+	@Column(name = "mem_acc")
 	private String memAcc;
+	
+	@Column(name = "mem_email")
 	private String memEmail;
+	
+	@Column(name = "mem_pwd")
 	private String memPwd;
+	
+	@Column(name = "mem_name")
 	private String memName;
+	
+	@Column(name = "mem_gender")
 	private Byte memGender;
+	
+	@Column(name = "mem_birthdate")
 	private Date memBirthdate;
+	
+	@Column(name = "mem_username")
 	private String memUsername;
+	
+	@Column(name = "mem_pic", columnDefinition = "longblob")
 	private byte[] memPic;
+	
+	@Column(name = "mem_intro")
 	private String memIntro;
+	
+	@Column(name = "mem_phone")
 	private String memPhone;
+	
+	@Column(name = "block_start_time")
 	private Timestamp blockStartTime;
+	
+	@Column(name = "block_end_time")
 	private Timestamp blockEndTime;
+	
+	@Column(name = "is_acc_ena")
 	private Byte isAccEna;
+	
+	@Column(name = "is_part_ena")
 	private Byte isPartEna;
+	
+	@Column(name = "is_host_ena")
 	private Byte isHostEna;
+	
+	@Column(name = "is_rent_ena")
 	private Byte isRentEna;
+	
+	@Column(name = "is_msg_ena")
 	private Byte isMsgEna;
+	
+	@Column(name = "mem_cr_time")
 	private Timestamp memCrTime;
+	
+	@Column(name = "mem_login_time")
 	private Timestamp memLoginTime;
+	
 
 	public Integer getMemId() {
 		return memId;

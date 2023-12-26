@@ -2,10 +2,28 @@ package com.faq.model;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "faq")
 public class FaqVO implements java.io.Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "faq_id", insertable = false , updatable = false)
 	private Integer faqId;
+	
+	@Column(name = "emp_id")
 	private Integer empId;
+	
+	@Column(name = "faq_que")
 	private String faqQue;
+	
+	@Column(name = "faq_ans")
 	private String faqAns;
 
 	public Integer getFaqId() {

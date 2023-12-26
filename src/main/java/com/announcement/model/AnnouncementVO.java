@@ -2,11 +2,31 @@ package com.announcement.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "announcement")
 public class AnnouncementVO implements java.io.Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ann_id", insertable = false , updatable = false)
 	private Integer annId;
+	
+	@Column(name = "emp_id")
 	private Integer empId;
+	
+	@Column(name = "ann_name")
 	private String annName;
+	
+	@Column(name = "ann_descr")
 	private String annDescr;
+	
+	@Column(name = "ann_time")
 	private Timestamp annTime;
 
 	public Integer getAnnId() {

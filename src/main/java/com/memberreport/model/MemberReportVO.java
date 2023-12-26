@@ -2,15 +2,43 @@ package com.memberreport.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "member_report")
 public class MemberReportVO implements java.io.Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "rep_id", insertable = false , updatable = false)
 	private Integer repId;
+	
+	@Column(name = "reporter_id")
 	private Integer reporterId;
+	
+	@Column(name = "reportee_id")
 	private Integer reporteeId;
+	
+	@Column(name = "emp_id")
 	private Integer empId;
+	
+	@Column(name = "rep_title")
 	private String repTitle;
+	
+	@Column(name = "rep_content")
 	private String repContent;
+	
+	@Column(name = "rep_pic" , columnDefinition = "longblob")
 	private byte[] repPic;
+	
+	@Column(name = "rep_status")
 	private Byte repStatus;
+	
+	@Column(name = "rep_time")
 	private Timestamp repTime;
 
 	public Integer getRepId() {

@@ -4,6 +4,7 @@
 <%@ page import="com.membership.model.*"%>
 <%@ page import="java.util.Base64"%>
 <%@ page import="util.Util"%>
+<%@ page import="com.membership.service.*"%>
 
 <%-- 此頁練習採用 EL 的寫法取值 --%>
 

@@ -67,8 +67,8 @@ h4 {
 			</FORM>
 		</li>
 
-		<jsp:useBean id="membershipS" scope="page"
-			class="com.membership.model.MembershipService" />
+		<jsp:useBean id="membershipSvc" scope="page"
+			class="com.membership.service.MembershipService" />
 
 		<li>
 			<FORM METHOD="post" ACTION="membership.do">
