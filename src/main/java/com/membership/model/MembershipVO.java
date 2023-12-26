@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-//@Entity
+@Entity
 @Table(name = "membership")
 public class MembershipVO implements java.io.Serializable{
 	@Id
