@@ -2,14 +2,36 @@ package com.notify.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "notification_message")
 public class NotifyVO implements java.io.Serializable {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "notify_id", updatable = false)
 	private	Integer	notifyId;
+	
+	@Column(name = "mem_id")
 	private	Integer	memId;
+	
+	@Column(name = "notify_title")
 	private	String	notifyTitle;
+	
+	@Column(name = "notify_content")
 	private	String	notifyContent;
+	
+	@Column(name = "notify_status")
 	private	Byte	notifyStatus;
-	private	Timestamp notifyTime;
+	
+	@Column(name = "notify_time", insertable = false)
+	private	Timestamp notifyTime;	
 	
 	public NotifyVO() {
 		super();

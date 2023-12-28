@@ -3,4 +3,5 @@ bin/
 target/
 .classpath
 .project
+.iml
 hibernate.cfg.xml

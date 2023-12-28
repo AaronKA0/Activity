@@ -4,16 +4,18 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 
 @Entity
 @Table(name = "venue_closed_date")
 public class VenClosedVO implements java.io.Serializable {
 	
 	@Id
-	@Column(name = "closed_date_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "closed_date_id", updatable = false)
 	private	Integer	closedDateId;
 	
 	@Column(name = "ven_id")
