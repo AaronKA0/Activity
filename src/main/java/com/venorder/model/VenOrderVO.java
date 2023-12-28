@@ -4,27 +4,74 @@ import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "venue_order")
 public class VenOrderVO implements java.io.Serializable {
 	
+	@Id
+	@Column(name = "ven_order_id", updatable = false)
 	private Integer venOrderId;
+	
+	@Column(name = "ven_id")
 	private Integer venId;
+	
+	@Column(name = "mem_id")
 	private Integer memId;
+	
+	@Column(name = "emp_id")
 	private Integer empId;
+	
+	@Column(name = "order_date")
 	private Date orderDate;
+	
+	@Column(name = "mem_phone")
 	private String memPhone;
+	
+	@Column(name = "act_descr")
 	private String actDescr;
+	
+	@Column(name = "user_count")
 	private Integer userCount;
+	
+	@Column(name = "mem_taxid")
 	private String memTaxid;
+	
+	@Column(name = "order_time")
 	private Timestamp orderTime;
+	
+	@Column(name = "order_pay_type")
 	private Byte orderPayType;
+	
+	@Column(name = "mem_transfer_num")
 	private String memTransferNum;
+	
+	@Column(name = "mem_credit_num")
 	private String memCreditNum;
+	
+	@Column(name = "order_status")
 	private Byte orderStatus;
+	
+	@Column(name = "ven_rent_status")
 	private Byte venRentStatus;
+	
+	@Column(name = "ven_rating")
 	private Double venRating;
+	
+	@Column(name = "ven_com")
 	private String venCom;
+	
+	@Column(name = "ven_com_status")
 	private Byte venComStatus;
+	
+	@Column(name = "ven_com_time")
 	private Timestamp venComTime;
+	
+	@Column(name = "ven_res_fee")
 	private BigDecimal venResFee;
 
 	public VenOrderVO() {

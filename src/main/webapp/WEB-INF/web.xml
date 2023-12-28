@@ -28,6 +28,8 @@
 		<servlet-name>VenueServlet</servlet-name>
 		<url-pattern>/venue/venue.do</url-pattern>
 	</servlet-mapping>
+<<<<<<< HEAD
+=======
 
 	<servlet>
 		<servlet-name>MembershipServlet</servlet-name>
@@ -37,6 +39,7 @@
 		<servlet-name>MembershipServlet</servlet-name>
 		<url-pattern>/membership/membership.do</url-pattern>
 	</servlet-mapping>
+>>>>>>> refs/heads/master
 
 </web-app>
 
