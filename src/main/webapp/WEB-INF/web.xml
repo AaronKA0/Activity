@@ -28,7 +28,7 @@
 		<servlet-name>VenueServlet</servlet-name>
 		<url-pattern>/venue/venue.do</url-pattern>
 	</servlet-mapping>
-
+	
 	<servlet>
 		<servlet-name>MembershipServlet</servlet-name>
 		<servlet-class>com.membership.controller.MembershipServlet</servlet-class>
