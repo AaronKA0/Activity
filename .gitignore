@@ -3,5 +3,10 @@ bin/
 target/
 .classpath
 .project
+<<<<<<< HEAD
 .iml
 hibernate.cfg.xml
+=======
+hibernate.cfg.xml
+.idea
+>>>>>>> refs/heads/master

@@ -15,15 +15,15 @@ public static void main(String[] args) {
 		INotifyDAO dao = new NotifyDAO();
 		
 		// 新增 insert
-		NotifyVO notifyVO1 = new NotifyVO();
-		
-		notifyVO1.setMemId(3);
-		notifyVO1.setNotifyTitle("測試新增");
-		notifyVO1.setNotifyContent("測試內容,測試內容,測試內容,測試內容,測試內容,測試內容.");
-		notifyVO1.setNotifyStatus((byte)2);
-//		notifyVO1.setNotifyTime(Timestamp.valueOf(LocalDateTime.now()));
-		
-		dao.insert(notifyVO1);
+//		NotifyVO notifyVO1 = new NotifyVO();
+//		
+//		notifyVO1.setMemId(3);
+//		notifyVO1.setNotifyTitle("測試新增");
+//		notifyVO1.setNotifyContent("測試內容,測試內容,測試內容,測試內容,測試內容,測試內容.");
+//		notifyVO1.setNotifyStatus((byte)2);
+//		// notifyVO1.setNotifyTime(Timestamp.valueOf(LocalDateTime.now()));
+//		
+//		dao.insert(notifyVO1);
 		
 		System.out.println("============================");
 		
