@@ -6,6 +6,8 @@ import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,6 +16,7 @@ import javax.persistence.Table;
 public class VenOrderVO implements java.io.Serializable {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ven_order_id", updatable = false)
 	private Integer venOrderId;
 	
@@ -29,7 +32,7 @@ public class VenOrderVO implements java.io.Serializable {
 	@Column(name = "order_date")
 	private Date orderDate;
 	
-	@Column(name = "mem_phone")
+	@Column(name = "mem_phone", columnDefinition = "char")
 	private String memPhone;
 	
 	@Column(name = "act_descr")
@@ -38,10 +41,10 @@ public class VenOrderVO implements java.io.Serializable {
 	@Column(name = "user_count")
 	private Integer userCount;
 	
-	@Column(name = "mem_taxid")
+	@Column(name = "mem_taxid", columnDefinition = "char")
 	private String memTaxid;
 	
-	@Column(name = "order_time")
+	@Column(name = "order_time", insertable = false)
 	private Timestamp orderTime;
 	
 	@Column(name = "order_pay_type")
@@ -50,7 +53,7 @@ public class VenOrderVO implements java.io.Serializable {
 	@Column(name = "mem_transfer_num")
 	private String memTransferNum;
 	
-	@Column(name = "mem_credit_num")
+	@Column(name = "mem_credit_num", columnDefinition = "char")
 	private String memCreditNum;
 	
 	@Column(name = "order_status")

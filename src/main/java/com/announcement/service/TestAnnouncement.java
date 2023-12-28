@@ -5,12 +5,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import com.announcement.model.AnnouncementVO;
+import com.announcement.dao.IAnnouncementDAO;
 import com.announcement.dao.AnnouncementDAO;
 
 public class TestAnnouncement {
 	
 	public static void main(String[] args) {
-		AnnouncementDAO dao = new AnnouncementDAO();
+		IAnnouncementDAO dao = new AnnouncementDAO();
 		
 		// 新增 insert
 //		AnnouncementVO announcementVO1 = new AnnouncementVO();
@@ -24,15 +25,15 @@ public class TestAnnouncement {
 		System.out.println("============================");
 		
 		// 修改 update
-		AnnouncementVO announcementVO2 = new AnnouncementVO();
-		
-		announcementVO2.setAnnId(8);
-		announcementVO2.setEmpId(3);
-		announcementVO2.setAnnName("測試修改");
-		announcementVO2.setAnnDescr("修改,修改,修改,修改,修改,修改.");
-		announcementVO2.setAnnTime(Timestamp.valueOf(LocalDateTime.now()));
-
-		dao.update(announcementVO2);
+//		AnnouncementVO announcementVO2 = new AnnouncementVO();
+//		
+//		announcementVO2.setAnnId(8);
+//		announcementVO2.setEmpId(3);
+//		announcementVO2.setAnnName("測試修改");
+//		announcementVO2.setAnnDescr("修改,修改,修改,修改,修改,修改.");
+//		announcementVO2.setAnnTime(Timestamp.valueOf(LocalDateTime.now()));
+//
+//		dao.update(announcementVO2);
 		
 		System.out.println("============================");
 		

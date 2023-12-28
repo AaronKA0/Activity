@@ -1,24 +1,22 @@
-package com.announcement.dao;
+package com.venorder.dao;
 
 import java.util.List;
 
 import org.hibernate.Session;
 
-import com.announcement.model.AnnouncementVO;
-import com.notify.dao.INotifyDAO;
-import com.notify.model.NotifyVO;
+import com.venorder.model.VenOrderVO;
 
 import util.HibernateUtil;
 
-public class AnnouncementDAO implements IAnnouncementDAO {
+public class VenOrderDAO implements IVenOrderDAO {
 	
 	//新增 insert
 		@Override
-		public int insert(AnnouncementVO announcementVO) {
+		public Integer insert(VenOrderVO venOrderVO) {
 			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			try {
 				session.beginTransaction();
-				Integer id = (Integer) session.save(announcementVO);
+				Integer id = (Integer) session.save(venOrderVO);
 				session.getTransaction().commit();
 				return id;
 			} catch (Exception e) {
@@ -27,49 +25,49 @@ public class AnnouncementDAO implements IAnnouncementDAO {
 			}
 			return -1;
 		}
-		
 			
+				
 	//修改 update	
 		@Override
-		public int update(AnnouncementVO announcementVO) {
+		public Integer update(VenOrderVO venOrderVO) {
 			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			try {
 				session.beginTransaction();
-				session.update(announcementVO);
+				session.update(venOrderVO);
 				session.getTransaction().commit();
 				return 1;
 			} catch (Exception e) {
 				e.printStackTrace();
 				session.getTransaction().rollback();
 			}
-			return -1;
+				return -1;
 		}
-			
+				
 
 	//查詢 getById	
 		@Override
-		public AnnouncementVO getById(Integer annId) {
+		public VenOrderVO getById(Integer venOrderId) {
 			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			try {
 				session.beginTransaction();
-				AnnouncementVO announcementVO = session.get(AnnouncementVO.class, annId);
+				VenOrderVO venOrderVO = session.get(VenOrderVO.class, venOrderId);
 				session.getTransaction().commit();
-				return announcementVO;
+				return venOrderVO;
 			} catch (Exception e) {
 				e.printStackTrace();
 				session.getTransaction().rollback();
 			}
 			return null;
 		}
-		
+			
 
 	//查詢 getAll
 		@Override
-		public List<AnnouncementVO> getAll(){
+		public List<VenOrderVO> getAll(){
 			Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 			try {
 				session.beginTransaction();
-				List<AnnouncementVO> list = session.createQuery("from AnnouncementVO", AnnouncementVO.class).list();
+				List<VenOrderVO> list = session.createQuery("from VenOrderVO", VenOrderVO.class).list();
 				session.getTransaction().commit();
 				return list;
 			} catch (Exception e) {
@@ -78,6 +76,6 @@ public class AnnouncementDAO implements IAnnouncementDAO {
 			}
 			return null;
 		}
-		
-		
+	
+	
 }
