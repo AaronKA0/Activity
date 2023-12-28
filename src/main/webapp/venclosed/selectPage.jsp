@@ -22,21 +22,21 @@
 	    	</FORM>
 	  	</li>
   	
-  	<jsp:useBean id="venClosedS" scope="page" class="w" />
+<%--   	<jsp:useBean id="venClosedS" scope="page" class="" /> --%>
    
-		<li>
-			<FORM METHOD="post" ACTION="venClosed/venClosed.do" >
-	      		<b>選擇場地:</b>
-	       		<select size="1" name="closedDateId">
-	         		<c:forEach var="venClosedVO" items="${venClosedSvc.all}" > 
-	          			<option value="${venClosedVO.closedDateId}"><b>場地</b>${venClosedVO.venId}
-	         		</c:forEach>   
-	       		</select>
-	       		<input type="hidden" name="action" value="getOne_For_Display">
-	       		<input type="submit" value="送出">
-	     	</FORM>
-		</li>
-	</ul>	 
+<!-- 		<li> -->
+<!-- 			<FORM METHOD="post" ACTION="venClosed/venClosed.do" > -->
+<!-- 	      		<b>選擇場地:</b> -->
+<!-- 	       		<select size="1" name="closedDateId"> -->
+<%-- 	         		<c:forEach var="venClosedVO" items="${venClosedSvc.all}" >  --%>
+<%-- 	          			<option value="${venClosedVO.closedDateId}"><b>場地</b>${venClosedVO.venId} --%>
+<%-- 	         		</c:forEach>    --%>
+<!-- 	       		</select> -->
+<!-- 	       		<input type="hidden" name="action" value="getOne_For_Display"> -->
+<!-- 	       		<input type="submit" value="送出"> -->
+<!-- 	     	</FORM> -->
+<!-- 		</li> -->
+<!-- 	</ul>	  -->
 	 
 	 
 	

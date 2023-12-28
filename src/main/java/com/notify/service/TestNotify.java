@@ -10,7 +10,7 @@ import com.notify.model.NotifyVO;
 
 public class TestNotify {
 
-public static void main(String[] args) {
+	public static void main(String[] args) {
 		
 		INotifyDAO dao = new NotifyDAO();
 		

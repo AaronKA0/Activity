@@ -12,6 +12,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "announcement")
 public class AnnouncementVO implements java.io.Serializable {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ann_id", insertable = false , updatable = false)
@@ -26,7 +27,7 @@ public class AnnouncementVO implements java.io.Serializable {
 	@Column(name = "ann_descr")
 	private String annDescr;
 	
-	@Column(name = "ann_time")
+	@Column(name = "ann_time", insertable = false)
 	private Timestamp annTime;
 
 	public Integer getAnnId() {
