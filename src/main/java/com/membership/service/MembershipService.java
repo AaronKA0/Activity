@@ -16,8 +16,8 @@ public class MembershipService {
 		dao = new MembershipDAO();
 	}
 
-	public MembershipVO addMembership(String memAcc, String memEmail, String memPwd, String memName,
-			Byte memGender,Date memBirthdate, String memUsername, byte[] memPic, Byte isAccEna, Byte isPartEna, Byte isHostEna,
+	public MembershipVO addMembership(String memAcc, String memEmail, String memPwd, String memName, Byte memGender,
+			Date memBirthdate, String memUsername, byte[] memPic, Byte isAccEna, Byte isPartEna, Byte isHostEna,
 			Byte isRentEna, Byte isMsgEna) {
 
 		MembershipVO membershipVO = new MembershipVO();
@@ -79,4 +79,3 @@ public class MembershipService {
 	}
 
 }
-

@@ -12,33 +12,33 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "post_report")
 public class PostReportVO implements java.io.Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "rep_id" , insertable = false, updatable = false)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "rep_id", insertable = false, updatable = false)
 	private Integer repId;
-    
-    @Column(name = "post_id")
+
+	@Column(name = "post_id")
 	private Integer postId;
-    
-    @Column(name = "mem_id")
+
+	@Column(name = "mem_id")
 	private Integer memId;
-    
-    @Column(name = "emp_id")
+
+	@Column(name = "emp_id")
 	private Integer empId;
-    
-    @Column(name = "rep_title")
+
+	@Column(name = "rep_title")
 	private String repTitle;
-    
-    @Column(name = "rep_content")
+
+	@Column(name = "rep_content")
 	private String repContent;
-    
-    @Column(name = "rep_pic")
+
+	@Column(name = "rep_pic")
 	private byte[] repPic;
-    
-    @Column(name = "rep_status")
+
+	@Column(name = "rep_status")
 	private Byte repStatus;
-    
-    @Column(name = "rep_time")
+
+	@Column(name = "rep_time")
 	private Timestamp repTime;
 
 	public Integer getRepId() {

@@ -177,7 +177,6 @@ public class MembershipServlet extends HttpServlet {
 
 //			Integer deptno = Integer.valueOf(req.getParameter("deptno").trim());
 
-			
 			membershipVO.setMemId(memId);
 			membershipVO.setMemAcc(memAcc);
 			membershipVO.setMemEmail(memEmail);
@@ -320,7 +319,7 @@ public class MembershipServlet extends HttpServlet {
 			membershipVO.setMemGender(memGender);
 			membershipVO.setMemBirthdate(memBirthdate);
 			membershipVO.setMemUsername(memUsername);
-			
+
 			byte[] memPic = null;
 			Part filePart = req.getPart("memPic");
 			if (filePart != null && filePart.getSize() != 0 && errorMsgs.isEmpty()) {
@@ -330,7 +329,7 @@ public class MembershipServlet extends HttpServlet {
 				inputStream.close();
 				membershipVO.setMemPic(memPic);
 			}
-			
+
 			membershipVO.setIsAccEna(isAccEna);
 			membershipVO.setIsPartEna(isPartEna);
 			membershipVO.setIsHostEna(isHostEna);
