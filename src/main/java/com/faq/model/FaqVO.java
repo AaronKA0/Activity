@@ -14,15 +14,15 @@ import javax.persistence.Table;
 public class FaqVO implements java.io.Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "faq_id", insertable = false , updatable = false)
+	@Column(name = "faq_id", insertable = false, updatable = false)
 	private Integer faqId;
-	
+
 	@Column(name = "emp_id")
 	private Integer empId;
-	
+
 	@Column(name = "faq_que")
 	private String faqQue;
-	
+
 	@Column(name = "faq_ans")
 	private String faqAns;
 

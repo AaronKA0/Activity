@@ -34,7 +34,6 @@ public class MembershipDAO implements IMembershipDAO {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		
 
 		try {
 
@@ -187,7 +186,7 @@ public class MembershipDAO implements IMembershipDAO {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				// empVo �]�٬� Domain objects
+
 				membershipVO = new MembershipVO();
 				membershipVO.setMemId(rs.getInt("mem_Id"));
 				membershipVO.setMemAcc(rs.getString("mem_Acc"));
@@ -251,7 +250,7 @@ public class MembershipDAO implements IMembershipDAO {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				// empVO 也稱為 Domain objects
+
 				membershipVO = new MembershipVO();
 				membershipVO.setMemId(rs.getInt("mem_Id"));
 				membershipVO.setMemAcc(rs.getString("mem_Acc"));
